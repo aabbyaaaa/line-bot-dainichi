@@ -1,0 +1,159 @@
+/**
+ * Dainichi 煤油暖爐 Handler
+ * 處理煤油暖爐相關的 Flex Message
+ */
+
+// 處理煤油暖爐商品列表（右邊點擊區域）
+function handleDainichiProducts() {
+  return {
+    type: "flex",
+    altText: "大日煤油暖爐商品推薦",
+    contents: {
+      type: "carousel",
+      contents: [
+        {
+          type: "bubble",
+          body: {
+            type: "box",
+            layout: "vertical",
+            contents: [
+              {
+                type: "image",
+                url: "https://cdn.shopify.com/s/files/1/0204/3327/2854/files/A-LINE_-C.jpg?v=1766129198",
+                aspectRatio: "1:1",
+                margin: "0px",
+                size: "full",
+              },
+            ],
+            paddingAll: "0px",
+          },
+          footer: {
+            type: "box",
+            layout: "vertical",
+            contents: [
+              {
+                type: "box",
+                layout: "baseline",
+                contents: [
+                  {
+                    type: "filler",
+                  },
+                  {
+                    type: "icon",
+                    url: "https://dgs.com.tw/hotcategory/Dainichi/",
+                  },
+                  {
+                    type: "text",
+                    text: "想省錢請點這 👉",
+                    color: "#FFFFFF",
+                    flex: 0,
+                    offsetTop: "-2px",
+                    action: {
+                      type: "message",
+                      label: "action",
+                      text: "FW-371LET限時下殺 $12,000｜查看完整優惠＞https://reurl.cc/vKE7Mo",
+                    },
+                  },
+                  {
+                    type: "filler",
+                  },
+                ],
+                spacing: "sm",
+              },
+            ],
+            borderWidth: "1px",
+            cornerRadius: "4px",
+            spacing: "sm",
+            borderColor: "#e85511",
+            margin: "xxl",
+            height: "40px",
+            backgroundColor: "#e85511",
+            action: {
+              type: "message",
+              label: "action",
+              text: "FW-371LET限時下殺 $12,000｜查看完整優惠＞https://reurl.cc/vKE7Mo",
+            },
+          },
+          styles: {
+            footer: {
+              separator: false,
+            },
+          },
+        },
+        {
+          type: "bubble",
+          body: {
+            type: "box",
+            layout: "vertical",
+            contents: [
+              {
+                type: "image",
+                url: "https://cdn.shopify.com/s/files/1/0204/3327/2854/files/A-LINE_-B.jpg?v=1766129198",
+                aspectRatio: "1:1",
+                margin: "0px",
+                size: "full",
+              },
+            ],
+            paddingAll: "0px",
+          },
+          footer: {
+            type: "box",
+            layout: "vertical",
+            contents: [
+              {
+                type: "box",
+                layout: "baseline",
+                contents: [
+                  {
+                    type: "filler",
+                  },
+                  {
+                    type: "icon",
+                    url: "https://dgs.com.tw/hotcategory/Dainichi/",
+                  },
+                  {
+                    type: "text",
+                    text: "想省錢請點這 👉",
+                    color: "#FFFFFF",
+                    flex: 0,
+                    offsetTop: "-2px",
+                    action: {
+                      type: "message",
+                      label: "action",
+                      text: "FW-57GRT限時下殺 $16,500｜查看完整優惠＞https://reurl.cc/vKE7Mo",
+                    },
+                  },
+                  {
+                    type: "filler",
+                  },
+                ],
+                spacing: "sm",
+              },
+            ],
+            borderWidth: "1px",
+            cornerRadius: "4px",
+            spacing: "sm",
+            borderColor: "#e85511",
+            margin: "xxl",
+            backgroundColor: "#e85511",
+            action: {
+              type: "message",
+              label: "action",
+              text: "FW-57GRT限時下殺 $16,500｜查看完整優惠＞https://reurl.cc/vKE7Mo",
+            },
+            height: "40px",
+          },
+          styles: {
+            footer: {
+              separator: false,
+            },
+          },
+        },
+      ],
+    },
+  };
+}
+
+module.exports = {
+  handleDainichiProducts,
+};

@@ -1,0 +1,22 @@
+{
+  "size": { "width": 2500, "height": 1686 },
+  "selected": true,
+  "name": "大日煤油暖爐主選單",
+  "chatBarText": "冬季煤油暖爐優惠✨",
+  "areas": [
+    {
+      "bounds": { "x": 0, "y": 0, "width": 1250, "height": 1686 },
+      "action": {
+        "type": "uri",
+        "uri": "https://dgs.com.tw/hotcategory/Dainichi/"
+      }
+    },
+    {
+      "bounds": { "x": 1250, "y": 0, "width": 1250, "height": 1686 },
+      "action": {
+        "type": "postback",
+        "data": "action=dainichi_products"
+      }
+    }
+  ]
+}

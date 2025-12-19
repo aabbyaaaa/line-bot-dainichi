@@ -1,0 +1,21 @@
+{
+  "name": "line-bot-blood-pressure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "richmenu:deploy": "node scripts/richmenu.js deploy --dir richmenus --default bloodPressure",
+    "richmenu:list": "node scripts/richmenu.js list",
+    "richmenu:delete-all": "node scripts/richmenu.js delete-all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "LINE Bot for blood pressure products",
+  "dependencies": {
+    "@line/bot-sdk": "^10.1.2",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  }
+}
