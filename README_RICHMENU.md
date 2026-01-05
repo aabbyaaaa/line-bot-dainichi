@@ -16,11 +16,11 @@ node scripts/richmenu.js list
 
 ### 暫停程式設定的圖文選單
 ```bash
-node scripts/richmenu.js disable
+node scripts/richmenu.js delete-all
 ```
-- ✅ 取消預設圖文選單，使用者將看不到程式設定的選單
-- ✅ 圖文選單設定仍保留在 LINE 伺服器，未刪除
-- ✅ 可隨時恢復，不需重新上傳圖片和設定
+- ✅ 刪除所有圖文選單，使用者將看不到圖文選單
+- ⚠️ 圖文選單將從 LINE 伺服器完全刪除
+- ✅ 可隨時重新部署恢復
 
 ### 部署煤油暖爐圖文選單
 ```bash
@@ -41,7 +41,7 @@ node scripts/richmenu.js delete-all
 ### 情境 1：暫停使用程式設定，改用 LINE 後台
 1. **暫停程式版本**
    ```bash
-   node scripts/richmenu.js disable
+   node scripts/richmenu.js delete-all
    ```
 
 2. **前往 LINE 後台設定**
@@ -97,8 +97,7 @@ line-bot-dainichi/
 | 指令 | 說明 | 適用情況 |
 |------|------|---------|
 | `list` | 列出所有圖文選單 | 查看狀態 |
-| `disable` | 取消預設圖文選單（暫停） | 改用後台管理 |
-| `delete-all` | 刪除所有圖文選單 | 完全清空 |
+| `delete-all` | 刪除所有圖文選單（暫停） | 改用後台管理或完全清空 |
 | `deploy --dir <folder> --default <name>` | 部署並啟用圖文選單 | 恢復程式版本 |
 
 ## ⚠️ 重要提醒
@@ -124,7 +123,7 @@ line-bot-dainichi/
 node scripts/richmenu.js list
 
 # 暫停程式設定的圖文選單
-node scripts/richmenu.js disable
+node scripts/richmenu.js delete-all
 ```
 
 ### 重新部署圖文選單
@@ -173,15 +172,15 @@ vercel --prod
 
 ## 🆘 疑難排解
 
-### 執行 disable 後顯示「目前沒有設定預設圖文選單」
-- 這是正常的，表示已經成功取消預設圖文選單
+### 執行 delete-all 後圖文選單消失
+- 這是正常的，表示已成功刪除所有圖文選單
 
 ### 執行 deploy 後報錯「Image too large」
 - 圖片檔案超過 1MB，請壓縮圖片後重試
 
 ### 後台和程式同時啟用了圖文選單
 - LINE 只會顯示後台設定的版本
-- 建議先執行 `disable` 停用程式版本，避免衝突
+- 建議先執行 `delete-all` 停用程式版本，避免衝突
 
 ## 📞 相關資源
 
